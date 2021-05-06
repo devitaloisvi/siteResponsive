@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <title>Área do cliente - Itechbot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <script src="acesso.js"></script> -->
+    <script type="text/javascript">
+        function acesso(form) {
+
+            form.nome.value = form.nome.value.toLowerCase()
+            form.senha.value = form.senha.value.toLowerCase()
+
+            if (form.nome.value == "marta@hotmail.com" && form.senha.value == "123") {
+                location = "itech.html"
+            } else {
+                form.nome.value = ""
+                form.senha.value = ""
+
+                alert("Dados incorretos")
+            }
+        }
+    </script>
+
+
+    <!-- Icones -->
+    <link rel="icon" href="imagens/WebTex.png">
+    <link rel="apple-touch-icon" href="imagens/WebTex.png">
+
+
+    <!-- <link rel="canonical" href="//getbootstrap.com/docs/4.0/examples/sign-in/"> -->
+
+    <!-- Bootstrap CSS -->
+    <link href="./style/style.css" rel="stylesheet">
+
+    <!-- Styles css -->
+    <link href="./style/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form class="form-signin">
+        <img class="mb-4" src="imagens/WebTex.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Fazer login</h1>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control form-control-user" placeholder="Endereço de email"
+            required autofocus>
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" id="inputPassword" class="form-control form-control-user" placeholder="Senha" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Lembrar do acesso
+            </label>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2018-2021</p>
+        <button class="btn btn-lg btn-primary btn-block" id="btnLogin" onclick="acesso(this.form)">Entrar</button>
+
+    </form>
+
+</body>
+
+
+
+
+</html>
